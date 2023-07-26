@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+.wrp {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrp--left {
+  margin-top: 20px;
+  display: flex;
+  animation-name: roll;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+}
+.photo--left {
+  width: 100vw;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 40px;
+}
+img {
+  border-radius: 15px;
+  object-fit: cover;
+  margin-right: 40px;
+}
+
+.text__middle {
+  display: flex;
+
+  /* overflow: hidden; */
+  margin: 10px 0;
+
+  animation-name: roll;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+}
+.wrp--inner {
+  display: flex;
+  align-items: center;
+  column-gap: 120px;
+  padding: 120px 0;
+  border-top: 4px solid violet;
+  border-bottom: 4px solid violet;
+}
+.wrp--text {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 125px;
+  font-size: 40px;
+  color: violet;
+  font-weight: 600;
+}
+
+.wrp--right {
+  margin-bottom: 20px;
+  display: flex;
+  animation-name: roll2;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+}
+.photo--right {
+  width: 100vw;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 40px;
+  transform: translateX(-100%);
+}
+
+@keyframes roll2 {
+  0% {
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes roll {
+  0% {
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
